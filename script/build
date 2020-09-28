@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# script/build: Build container images locally for testing
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+[[ ! -f Version ]] && echo "No such file 'Version'" && exit 1
+. Version
+
+IMG="localhost/mkdocs-material:${TAG}"
+
+# Avoid overwritting existing image tag
+ERR="ERROR: ${IMG} already exists. Please, update the tag in ./Version"
+[[ $(buildah images -q "$IMG" &>/dev/null) ]] && echo "$ERR" && exit 1
+
+buildah bud -t "$IMG" --build-arg TAG="$TAG" -f Dockerfile .
