@@ -1,6 +1,6 @@
 # mkdocs-material
 
-Mkdocs is a fast, simple static site generator. [Mkdocs-Material](https://squidfunk.github.io/mkdocs-material/) is a theme and many addition to Mkdocs which makes technical documentation easier to write and read.
+Mkdocs is a fast, simple static site generator. [Mkdocs-Material](https://squidfunk.github.io/mkdocs-material/) is a theme and many additions to Mkdocs which makes technical documentation easier to write and read.
 
 We wanted to add more features over the [Official mkdocs-material image](https://hub.docker.com/r/squidfunk/mkdocs-material/) by installing [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/) and more.
 
