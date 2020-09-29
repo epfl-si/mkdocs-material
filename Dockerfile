@@ -1,6 +1,4 @@
-ARG TAG
-ARG DEBIAN_FRONTEND=noninteractive
-FROM docker.io/squidfunk/mkdocs-material:$TAG
+FROM docker.io/squidfunk/mkdocs-material:6.0.1
 LABEL maintainer="laurent.indermuehle@epfl.ch"
 WORKDIR /tmp
 

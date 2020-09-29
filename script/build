@@ -2,17 +2,10 @@
 
 # script/build: Build container images locally for testing
 
-set -e
-
-cd "$(dirname "$0")/.."
-
-[[ ! -f Version ]] && echo "No such file 'Version'" && exit 1
-. Version
-
-IMG="localhost/mkdocs-material:${TAG}"
+IMG="localhost/mkdocs-material:6.0.1"
 
 # Avoid overwritting existing image tag
-ERR="ERROR: ${IMG} already exists. Please, update the tag in ./Version"
+ERR="ERROR: ${IMG} already exists. Please, update the tag version"
 [[ $(buildah images -q "$IMG" &>/dev/null) ]] && echo "$ERR" && exit 1
 
-buildah bud -t "$IMG" --build-arg TAG="$TAG" -f Dockerfile .
+buildah bud -t "$IMG" -f Dockerfile .
