@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/epflsiexheb/mkdocs-material/status "Docker Repository on Quay")](https://quay.io/repository/epflsiexheb/mkdocs-material)
+
 # mkdocs-material
 
 Mkdocs is a fast, simple static site generator. [Mkdocs-Material](https://squidfunk.github.io/mkdocs-material/) is a theme and many additions to Mkdocs which makes technical documentation easier to write and read.
