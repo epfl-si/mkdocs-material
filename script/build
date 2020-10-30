@@ -2,7 +2,7 @@
 
 # script/build: Build container images locally for testing
 
-IMG="localhost/mkdocs-material:6.0.1"
+IMG="localhost/mkdocs-material:6.1.0"
 
 # Avoid overwritting existing image tag
 errorMsg="ERROR: ${IMG} already exists. Please, update the tag version"

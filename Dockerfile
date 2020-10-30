@@ -1,4 +1,4 @@
-FROM docker.io/squidfunk/mkdocs-material:6.0.1
+FROM docker.io/squidfunk/mkdocs-material:6.1.0
 LABEL maintainer="laurent.indermuehle@epfl.ch"
 WORKDIR /tmp
 
@@ -9,10 +9,10 @@ WORKDIR /tmp
 # Pygments:               https://github.com/pygments/pygments/releases
 
 RUN pip install --no-cache-dir                         \
-    'plantuml-markdown==3.4.0'                         \
-    'mkdocs-git-revision-date-localized-plugin==0.7.2' \
+    'plantuml-markdown==3.4.1'                         \
+    'mkdocs-git-revision-date-localized-plugin==0.7.3' \
     'pymdown-extensions==8.0.1'                        \
-    'pygments==2.7.1'                                  \
+    'pygments==2.7.2'                                  \
     && rm -rf /tmp/*
 WORKDIR /docs
 VOLUME /docs
