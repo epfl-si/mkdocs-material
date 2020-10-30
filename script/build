@@ -5,7 +5,7 @@
 IMG="localhost/mkdocs-material:6.0.1"
 
 # Avoid overwritting existing image tag
-ERR="ERROR: ${IMG} already exists. Please, update the tag version"
-[[ $(buildah images -q "$IMG" &>/dev/null) ]] && echo "$ERR" && exit 1
+errorMsg="ERROR: ${IMG} already exists. Please, update the tag version"
+[[ $(buildah images -q "$IMG" &>/dev/null) ]] && echo "$errorMsg" && exit 1
 
 buildah bud -t "$IMG" -f Dockerfile .
